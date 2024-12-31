@@ -9,8 +9,15 @@
   border-radius: 80px;
   position: relative;
   z-index: 9;
+  @media #{$xs} {
+    font-size: 16px;
+    padding: 15px 25px;
+  }
   .btn-arrow {
     margin-left: 10px;
+    @media #{$xs} {
+      margin-left: 5px;
+    }
     .btn-arrow-fill {
       fill: var(--pn-white);
     }

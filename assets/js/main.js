@@ -44,11 +44,11 @@
   $(".services-slider").slick({
     dots: false,
     infinite: true,
-    speed: 800,
+    speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
-    autoplay: true,
+    autoplay: false,
     prevArrow: '<i class="fa-solid arrow arrow-prev fa-arrow-left"></i>',
     nextArrow: '<i class="fa-solid arrow arrow-next fa-arrow-right"></i>',
     responsive: [

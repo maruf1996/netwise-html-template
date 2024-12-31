@@ -126,7 +126,8 @@
   top: 0;
   left: 0;
 
-  .pn-desktop-container {
+  .pn-desktop-container,
+  .mobile-topbar {
     background-color: var(--pn-white) !important;
     border-radius: 0;
     padding: 0;

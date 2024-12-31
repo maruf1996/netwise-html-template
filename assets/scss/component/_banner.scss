@@ -2,7 +2,14 @@
 
 .banner-section {
   padding: 117px 0 17px 0;
+  @media #{$md,$xs} {
+    padding: 200px 0 17px 0;
+  }
   .banner-content {
+    @media #{$md} {
+      max-width: 550px;
+      margin: 0 auto;
+    }
     .banner-title-shape {
       top: -19px;
       right: 77px;
@@ -10,16 +17,39 @@
         right: 10px;
         top: -15px;
       }
+      @media #{$lg} {
+        right: 22px;
+        top: -30px;
+      }
+      @media #{$xs} {
+        right: 22px;
+        top: -30px;
+      }
     }
     .banner-title {
       font-size: 74px;
       line-height: 84px;
       letter-spacing: -1.84px;
       margin-bottom: 30px;
+      @media #{$lg} {
+        font-size: 42px;
+        line-height: 52px;
+      }
+      @media #{$md} {
+        line-height: 66px;
+        font-size: 52px;
+      }
+      @media #{$xs} {
+        line-height: 60px;
+        font-size: 48px;
+      }
     }
     .banner-btn {
       gap: 50px;
       margin-top: 40px;
+      @media #{$xs} {
+        gap: 30px;
+      }
       .play-video {
         gap: 10px;
         .icon {
@@ -50,5 +80,20 @@
     filter: blur(152.6000061035px);
     bottom: -176px;
     right: -220px;
+  }
+  .banner-shape {
+    img {
+      @media #{$lg} {
+        left: -125px !important;
+      }
+      @media #{$md,$sm,$xs} {
+        display: none;
+      }
+    }
+  }
+  .banner-image {
+    @media #{$md,$sm,$xs} {
+      padding-top: 50px;
+    }
   }
 }

@@ -5,6 +5,10 @@
     .image-main {
       max-width: 482px;
       padding-left: 35px;
+      @media #{$xxs} {
+        max-width: 100%;
+        padding-left: 10px;
+      }
       &::before {
         position: absolute;
         content: "";
@@ -15,24 +19,43 @@
         background-color: var(--pn-secondary);
         border-radius: 20px;
         z-index: -1;
+        @media #{$xxs} {
+          width: 100%;
+          left: -5px;
+          bottom: -15px;
+        }
       }
     }
     .small-image {
       max-width: 331px;
       border: 14px solid var(--pn-white);
-      bottom: -78px;
+      bottom: -68px;
       right: 25px;
+      @media #{$lg} {
+        right: 0;
+      }
+      @media #{$xxs} {
+        display: none;
+      }
     }
   }
   .features-content {
     padding: 13px 0 0 53px;
+    @media #{$lg} {
+      padding: 0 0 0 10px;
+    }
+    @media #{$md,$xs} {
+      padding: 100px 0 0 0;
+    }
     .features-list {
       ul {
         li {
           gap: 30px;
+          @media #{$lg} {
+            gap: 20px;
+          }
           .feature-info {
             .feature-title {
-              margin-bottom: 10px;
               font-size: 22px;
               line-height: 36px;
             }
