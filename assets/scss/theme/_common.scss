@@ -1,0 +1,9 @@
+@use "../utils" as *;
+
+.background {
+  background: var(--pn-background);
+}
+
+.br-20 {
+  border-radius: 20px;
+}

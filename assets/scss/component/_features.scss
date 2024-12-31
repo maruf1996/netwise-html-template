@@ -1,0 +1,47 @@
+@use "../utils" as *;
+
+.features-section {
+  .features-image {
+    .image-main {
+      max-width: 482px;
+      padding-left: 35px;
+      &::before {
+        position: absolute;
+        content: "";
+        bottom: -32px;
+        left: 0;
+        width: 413px;
+        height: 229px;
+        background-color: var(--pn-secondary);
+        border-radius: 20px;
+        z-index: -1;
+      }
+    }
+    .small-image {
+      max-width: 331px;
+      border: 14px solid var(--pn-white);
+      bottom: -78px;
+      right: 25px;
+    }
+  }
+  .features-content {
+    padding: 13px 0 0 53px;
+    .features-list {
+      ul {
+        li {
+          gap: 30px;
+          .feature-info {
+            .feature-title {
+              margin-bottom: 10px;
+              font-size: 22px;
+              line-height: 36px;
+            }
+          }
+        }
+        li + li {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}

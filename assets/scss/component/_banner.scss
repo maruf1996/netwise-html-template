@@ -1,0 +1,54 @@
+@use "../utils" as *;
+
+.banner-section {
+  padding: 117px 0 17px 0;
+  .banner-content {
+    .banner-title-shape {
+      top: -19px;
+      right: 77px;
+      @media #{$xl} {
+        right: 10px;
+        top: -15px;
+      }
+    }
+    .banner-title {
+      font-size: 74px;
+      line-height: 84px;
+      letter-spacing: -1.84px;
+      margin-bottom: 30px;
+    }
+    .banner-btn {
+      gap: 50px;
+      margin-top: 40px;
+      .play-video {
+        gap: 10px;
+        .icon {
+          width: 50px;
+          height: 50px;
+          background-color: var(--pn-tertiary);
+          color: var(--pn-secondary);
+          @include transition(0.3s);
+        }
+        .play-text {
+          letter-spacing: -0.36px;
+        }
+        &:hover {
+          .icon {
+            background-color: var(--pn-black);
+            color: var(--pn-white);
+          }
+        }
+      }
+    }
+  }
+  .custom-shadow {
+    width: 431px;
+    height: 431px;
+    background: var(--pn-tertiary);
+    opacity: 0.6;
+    -webkit-filter: blur(152.6000061035px);
+    filter: blur(152.6000061035px);
+    bottom: -176px;
+    right: -220px;
+  }
+}
