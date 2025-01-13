@@ -31,12 +31,28 @@
     &:hover {
       color: var(--pn-secondary);
       border: 5px solid var(--pn-secondary);
+      @media #{$xxs} {
+        border: 3px solid var(--pn-secondary);
+      }
+    }
+    @media #{$xxs} {
+      width: 55px;
+      height: 55px;
+      border: 3px solid var(--pn-border-two);
+      top: auto;
+      bottom: -90px;
     }
   }
   .arrow-prev {
     right: 92px;
+    @media #{$xxs} {
+      right: 50%;
+    }
   }
   .arrow-next {
     right: 12px;
+    @media #{$xxs} {
+      right: calc(50% - 65px);
+    }
   }
 }

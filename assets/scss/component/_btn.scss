@@ -20,6 +20,7 @@
     }
     .btn-arrow-fill {
       fill: var(--pn-white);
+      @include transition(0.3s);
     }
   }
   &::before {
@@ -38,6 +39,23 @@
   &:hover {
     &::before {
       transform: scale(1);
+    }
+  }
+  &.theme-btn-border {
+    background-color: transparent;
+    color: var(--pn-black);
+    border: 1px solid var(--pn-primary);
+    .btn-arrow-fill {
+      fill: var(--pn-black);
+    }
+    &::before {
+      background-color: var(--pn-primary);
+    }
+    &:hover {
+      color: var(--pn-white);
+      .btn-arrow-fill {
+        fill: var(--pn-white);
+      }
     }
   }
 }

@@ -29,6 +29,48 @@
     },
   });
 
+  // Team move and active js
+  var team_item = gsap.utils.toArray(".team-item");
+  let hover_img = gsap.utils.toArray(".hover-image");
+
+  // Function to move the service image on mouse move
+  function ServiceImageMove(event, item) {
+    const contentBox = item.getBoundingClientRect();
+    const dx = (event.clientX - contentBox.x - contentBox.width / 1) / 3;
+    const dy = (event.clientY - contentBox.y - contentBox.height / 1) / 10;
+
+    hover_img.forEach((img) => {
+      gsap.to(img, {
+        x: dx,
+        y: dy,
+      });
+    });
+  }
+
+  // Add hover effect only for screens larger than 768px
+  if (window.innerWidth > 767) {
+    team_item.forEach((item, i) => {
+      item.addEventListener("mousemove", (event) => {
+        ServiceImageMove(event, item);
+      });
+
+      item.addEventListener("mouseleave", () => {
+        hover_img.forEach((img) => {
+          gsap.to(img, {
+            x: 0,
+            y: 0,
+          });
+        });
+      });
+    });
+
+    // Add active team class on hover
+    $(".team-item").hover(function () {
+      $(".team-item").removeClass("active-team");
+      $(this).addClass("active-team");
+    });
+  }
+
   /* Odometer Activeate js */
   $(document).ready(function () {
     $(".odometer").appear(function () {
@@ -53,7 +95,13 @@
     nextArrow: '<i class="fa-solid arrow arrow-next fa-arrow-right"></i>',
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 576,
         settings: {
           slidesToShow: 1,
         },

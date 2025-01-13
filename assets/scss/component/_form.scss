@@ -1,1 +1,28 @@
 @use "../utils" as *;
+
+.form {
+  .input-group {
+    .form-field {
+      height: 68px;
+      border: 1px solid var(--pn-border);
+      color: var(--pn-paragraph);
+      width: 100%;
+      border-radius: 50px !important;
+      @include transition(0.3s);
+      padding: 0 20px;
+      font-size: 18px;
+      &:focus {
+        border: 1px solid var(--pn-secondary);
+      }
+    }
+    .textarea-control {
+      height: 130px;
+      padding: 20px;
+      border-radius: 30px !important;
+      resize: none;
+      &:focus {
+        outline: var(--pn-secondary) !important;
+      }
+    }
+  }
+}

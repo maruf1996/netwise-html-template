@@ -4,6 +4,36 @@
   background: var(--pn-background);
 }
 
+.bg-secondary {
+  background-color: var(--pn-secondary) !important;
+}
+
 .br-20 {
   border-radius: 20px;
+}
+
+.social-icon-box {
+  ul {
+    li {
+      a {
+        display: inline-block;
+        margin-right: 10px;
+        color: var(--pn-black);
+        width: 35px;
+        height: 35px;
+        text-align: center;
+        line-height: 35px;
+        border-radius: 5px;
+        border: 1px solid var(--pn-border);
+        font-size: 14px;
+        @include transition(0.3s);
+        background-color: transparent;
+        &:hover {
+          background-color: var(--pn-secondary);
+          border: 1px solid var(--pn-secondary);
+          color: var(--pn-white);
+        }
+      }
+    }
+  }
 }

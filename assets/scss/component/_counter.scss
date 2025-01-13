@@ -1,0 +1,59 @@
+@use "../utils" as *;
+
+.counter-section {
+  .section-title {
+    .title {
+      font-size: 74px;
+      line-height: 84px;
+      @media #{$lg,$md,$sm} {
+        font-size: 46px;
+        line-height: 56px;
+        max-width: 100%;
+      }
+      @media #{$xxs} {
+        font-size: 34px;
+        line-height: 44px;
+        max-width: 100%;
+      }
+    }
+  }
+  .counter-item {
+    background-color: var(--pn-white);
+    padding: 38px 20px;
+    border: 1px solid transparent;
+    @include transition(0.3s);
+    &:hover {
+      border: 1px solid var(--pn-secondary);
+    }
+    @media #{$lg,$md,$xs} {
+      padding: 34px 18px;
+    }
+    .number {
+      font-size: 60px;
+      line-height: 68px;
+      display: block;
+      margin-bottom: 5px;
+      letter-spacing: -1.48px;
+      @media #{$xl} {
+        font-size: 54px;
+        line-height: 64px;
+      }
+      @media #{$lg,$md,$xs} {
+        font-size: 50px;
+        line-height: 58px;
+      }
+    }
+    .title {
+      color: var(--pn-paragraph);
+    }
+  }
+  .counter-image {
+    max-width: 580px;
+    height: 100%;
+    @media #{$lg,$md,$xs} {
+      max-width: 100%;
+      height: auto;
+      margin-top: 20px;
+    }
+  }
+}

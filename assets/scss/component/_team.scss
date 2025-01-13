@@ -1,0 +1,91 @@
+@use "../utils" as *;
+
+.team-section {
+  .team-item {
+    border: 1px solid var(--pn-border);
+    padding: 50px 40px;
+    @include transition(0.3s);
+    @media #{$xs} {
+      text-align: center;
+    }
+    .team-info {
+      .team-title {
+        margin-bottom: 10px;
+      }
+      @media #{$xs} {
+        margin-bottom: 20px;
+      }
+    }
+    .hover-image {
+      max-width: 300px;
+      right: 78px;
+      top: 50%;
+      transform: translateY(-50%) rotate(-15deg);
+      visibility: hidden;
+      opacity: 0;
+      z-index: 9;
+      @include transition(0.3s);
+      @media #{$xl,$lg,$md} {
+        max-width: 250px;
+        max-height: 280px;
+      }
+      @media #{$xs} {
+        margin: auto;
+        max-width: 250px;
+        transform: translateY(0) rotate(0);
+        visibility: visible;
+        opacity: 1;
+        position: static !important;
+      }
+    }
+    &:hover {
+      background-color: var(--pn-white);
+      .social-icon-box {
+        ul {
+          li {
+            a {
+              background-color: var(--pn-white);
+              &:hover {
+                background-color: var(--pn-secondary);
+                border: 1px solid var(--pn-secondary);
+                color: var(--pn-white);
+              }
+            }
+          }
+        }
+      }
+    }
+    &.active-team {
+      .hover-image {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+    .social-icon-box {
+      position: relative;
+      z-index: 99;
+      @media #{$md,$xs} {
+        margin-left: 50px;
+        ul {
+          li {
+            a {
+              background-color: var(--pn-white);
+              &:hover {
+                background-color: var(--pn-secondary);
+                border: 1px solid var(--pn-secondary);
+                color: var(--pn-white);
+              }
+            }
+          }
+        }
+      }
+      @media #{$xs} {
+        margin-left: 0;
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .team-item + .team-item {
+    margin-top: 60px;
+  }
+}
