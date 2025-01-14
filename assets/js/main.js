@@ -109,6 +109,17 @@
     ],
   });
 
+  // testimonial slider js
+  $(".testimonial-slider").slick({
+    dots: false,
+    infinite: true,
+    speed: 800,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+  });
+
   // Mobile menu js start
   $(".mobile-topbar .bars").on("click", function () {
     $(".mobile-menu-overlay,.mobile-menu-main").addClass("active");

@@ -80,34 +80,53 @@
       }
     }
   }
-  .call-to-action {
-    gap: 16px;
-    .icon {
-      width: 55px;
-      height: 55px;
-      background-color: var(--pn-white);
-      color: var(--pn-primary);
+}
+
+.call-to-action {
+  gap: 16px;
+  .icon {
+    width: 55px;
+    height: 55px;
+    background-color: var(--pn-white);
+    color: var(--pn-primary);
+    @include transition(0.3s);
+  }
+  .info {
+    .help {
+      letter-spacing: -0.36px;
+    }
+    .number {
+      font-weight: 700;
+      line-height: 30px;
+      color: var(--pn-black);
+      font-size: 18px;
       @include transition(0.3s);
     }
-    .info {
-      .help {
-        letter-spacing: -0.36px;
-      }
-      .number {
-        font-weight: 700;
-        line-height: 30px;
-        color: var(--pn-black);
-        font-size: 18px;
-        @include transition(0.3s);
-      }
+  }
+  &:hover {
+    .icon {
+      background-color: var(--pn-primary);
+      color: var(--pn-white);
+    }
+    .number {
+      color: var(--pn-primary);
+    }
+  }
+  &-2 {
+    .icon {
+      background-color: var(--pn-secondary);
+      color: var(--pn-white);
+    }
+    .number {
+      margin-top: 2px;
     }
     &:hover {
       .icon {
-        background-color: var(--pn-primary);
+        background-color: var(--pn-secondary);
         color: var(--pn-white);
       }
       .number {
-        color: var(--pn-primary);
+        color: var(--pn-secondary);
       }
     }
   }

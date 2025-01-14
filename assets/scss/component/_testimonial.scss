@@ -1,0 +1,23 @@
+@use "../utils" as *;
+
+.testimonial-section {
+  .testimonial-item {
+    padding: 40px;
+    .rating {
+      i {
+        color: var(--pn-tertiary);
+        font-size: 20px;
+      }
+    }
+    .author-info {
+      margin-top: 63px;
+      .author {
+        gap: 21px;
+        .img {
+          width: 70px;
+          height: 70px;
+        }
+      }
+    }
+  }
+}
