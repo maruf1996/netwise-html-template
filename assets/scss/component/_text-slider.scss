@@ -1,0 +1,35 @@
+@use "../utils" as *;
+
+.text-slider-section {
+  .text-slider {
+    padding: 30px 0;
+    border-top: 1px solid var(--pn-secondary);
+    border-bottom: 1px solid var(--pn-secondary);
+    gap: 40px;
+    .slider-item {
+      gap: 40px;
+      animation: scroll2 18s linear infinite;
+      .title {
+        font-size: 60px;
+        font-weight: 300;
+        line-height: 68px;
+        letter-spacing: -1.48px;
+        gap: 40px;
+      }
+    }
+    &:hover {
+      .slider-item {
+        animation-play-state: paused;
+      }
+    }
+  }
+}
+
+@keyframes scroll2 {
+  0% {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 2.6rem));
+  }
+}

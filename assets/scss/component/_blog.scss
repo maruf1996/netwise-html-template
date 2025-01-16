@@ -1,0 +1,46 @@
+@use "../utils" as *;
+
+.blog-section {
+  .blog-item {
+    .blog-image {
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      img {
+        @include transition(0.3s);
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+    .blog-content {
+      padding: 20px;
+      .blog-meta {
+        a {
+          color: var(--pn-paragraph);
+          font-size: 18px;
+          line-height: 28px;
+          font-weight: 400;
+          letter-spacing: -0.36px;
+          i {
+            color: var(--pn-primary);
+            font-size: 14px;
+            margin-right: 10px;
+          }
+        }
+      }
+      .blog-title {
+        padding: 15px 0 10px 0;
+        a {
+          font-size: 22px;
+          line-height: 36px;
+          font-weight: 600;
+          color: var(--pn-black);
+          @include transition(0.3s);
+          &:hover {
+            color: var(--pn-primary);
+          }
+        }
+      }
+    }
+  }
+}
