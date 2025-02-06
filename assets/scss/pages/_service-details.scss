@@ -1,0 +1,47 @@
+@use "../utils" as *;
+
+.service-details-section {
+  .service-content {
+    .title {
+      margin-bottom: 20px;
+    }
+    .sub-title {
+      margin-bottom: 10px;
+    }
+    ul {
+      margin-top: 20px;
+      li {
+        margin-top: 14px;
+        padding-left: 26px;
+        position: relative;
+        &::before {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          content: "\f058";
+          font-family: "Font Awesome 6 Pro";
+          color: var(--pn-secondary);
+        }
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+    .inner-content {
+      margin: 60px 0;
+      ul {
+        li {
+          &::before {
+            content: "\f324";
+            font-size: 14px;
+            color: var(--pn-primary);
+          }
+        }
+      }
+    }
+    p + p {
+      margin-top: 20px;
+    }
+  }
+}

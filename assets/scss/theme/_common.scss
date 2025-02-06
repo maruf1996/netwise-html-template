@@ -1,11 +1,16 @@
 @use "../utils" as *;
 
 .background {
-  background: var(--pn-background);
+  background: var(--pn-background) !important;
 }
-
 .bg-secondary {
   background-color: var(--pn-secondary) !important;
+}
+.bg-tertiary {
+  background-color: var(--pn-tertiary) !important;
+}
+.bg-primary {
+  background-color: var(--pn-primary) !important;
 }
 
 .br-20 {

@@ -1,1 +1,40 @@
 @use "../utils" as *;
+
+.base-pagination {
+  @media #{$xxs} {
+    margin-bottom: 50px;
+  }
+  ul {
+    li {
+      a {
+        color: var(--pn-black);
+        font-family: var(--pn-Grotesk-fonts);
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 60px;
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        border-radius: 50%;
+        border: 1px solid var(--pn-border);
+        @include transition(0.3s);
+        @media #{$xxs} {
+          width: 40px;
+          height: 40px;
+          line-height: 40px;
+          font-size: 18px;
+        }
+        &.active {
+          background-color: var(--pn-primary);
+          color: var(--pn-white);
+          border: 1px solid var(--pn-primary);
+        }
+        &:hover {
+          background-color: var(--pn-primary);
+          color: var(--pn-white);
+          border: 1px solid var(--pn-primary);
+        }
+      }
+    }
+  }
+}

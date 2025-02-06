@@ -45,8 +45,15 @@
     background-color: transparent;
     color: var(--pn-black);
     border: 1px solid var(--pn-primary);
-    .btn-arrow-fill {
-      fill: var(--pn-black);
+    .arrow {
+      margin-left: 10px;
+      @media #{$xs} {
+        margin-left: 5px;
+      }
+      .btn-arrow-fill {
+        fill: var(--pn-black);
+        @include transition(0.3s);
+      }
     }
     &::before {
       background-color: var(--pn-primary);
@@ -56,6 +63,30 @@
       .btn-arrow-fill {
         fill: var(--pn-white);
       }
+    }
+  }
+  &.white-btn {
+    background-color: var(--pn-white);
+    color: var(--pn-black);
+    &:hover {
+      color: var(--pn-white);
+    }
+  }
+  &.tertiary-btn {
+    background-color: var(--pn-tertiary);
+    color: var(--pn-black);
+    &:hover {
+      color: var(--pn-white);
+    }
+  }
+  &.tertiary-btn-2 {
+    background-color: var(--pn-tertiary);
+    color: var(--pn-black);
+    &:hover {
+      color: var(--pn-white);
+    }
+    &::before {
+      background-color: var(--pn-secondary);
     }
   }
 }

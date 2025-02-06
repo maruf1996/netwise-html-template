@@ -6,7 +6,7 @@
       box-shadow: none;
     }
     .accordion-item {
-      border: 1px solid var(--border-color);
+      border: transparent;
       border-radius: 32px !important;
     }
     .accordion-button {
@@ -64,8 +64,24 @@
       background-color: var(--pn-tertiary);
       height: 100%;
       width: 100%;
+      img {
+        @media #{$xl,$lg,$md,$xs} {
+          height: 40px;
+        }
+      }
       @media #{$xxs} {
         padding: 40px 0;
+      }
+    }
+  }
+  &.style-2 {
+    .accordion-item {
+      border: 1px solid var(--pn-border);
+    }
+    .client-number {
+      background-color: var(--pn-primary) !important;
+      img {
+        filter: invert(1);
       }
     }
   }

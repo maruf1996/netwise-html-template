@@ -57,3 +57,123 @@
     }
   }
 }
+
+.counter-section-two {
+  padding: 120px 20px 0;
+  .counter-main {
+    background-color: var(--pn-tertiary);
+    padding: 120px 0 424px 0;
+    .shape {
+      opacity: 0.1;
+    }
+  }
+  .testimonial-main {
+    padding: 30px 60px 30px 30px;
+    margin-top: -305px;
+    @media #{$md,$xs} {
+      margin-top: -350px;
+    }
+    .testimonial-image {
+      max-width: 343px;
+      @media #{$xs} {
+        display: none;
+      }
+    }
+    .testimonial-two-slider {
+      padding-top: 34px;
+      padding-left: 60px;
+      min-height: 518px;
+      @media #{$lg} {
+        min-height: 318px;
+      }
+      @media #{$md,$xs} {
+        min-height: 318px;
+        padding-left: 15px;
+      }
+      .slider-item {
+        .user {
+          gap: 21px;
+        }
+        .details {
+          margin-top: 40px;
+          p {
+            font-family: "Space Grotesk";
+            font-size: 30px;
+            font-weight: 500;
+            line-height: 50px;
+            letter-spacing: -0.36px;
+            @media #{$xl} {
+              font-size: 24px;
+              line-height: 40px;
+            }
+            @media #{$lg} {
+              font-size: 20px;
+              line-height: 38px;
+            }
+            @media #{$md,$xs} {
+              font-size: 18px;
+              line-height: 30px;
+            }
+          }
+        }
+        .rating {
+          margin-top: 140px;
+          margin-bottom: 0;
+          @media #{$lg} {
+            margin-top: 60px;
+          }
+          @media #{$md,$xs} {
+            margin-top: 25px;
+          }
+          i {
+            font-size: 20px;
+            color: var(--pn-tertiary);
+            &.no-rate {
+              color: var(--200, #ccc);
+            }
+          }
+        }
+      }
+      .slick-dots {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        li {
+          display: inline-block;
+          margin-left: 12px;
+          line-height: 0;
+          button {
+            position: relative;
+            font-size: 2px;
+            width: 7px;
+            height: 7px;
+            background-color: var(--pn-border);
+            border-radius: 50%;
+            border: 0;
+            @include transition(0.3s);
+            &::before {
+              width: 19px;
+              height: 19px;
+              border: 1px solid transparent;
+              border-radius: 50%;
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              @include transition(0.3s);
+            }
+          }
+          &.slick-active {
+            button {
+              background-color: var(--pn-primary);
+              &::before {
+                border-color: var(--pn-primary);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

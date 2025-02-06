@@ -35,3 +35,45 @@
     }
   }
 }
+
+.message-section-two {
+  .messages-main {
+    padding: 80px 60px;
+    @media #{$xs} {
+      padding: 80px 10px;
+    }
+    .contact-info {
+      background-color: var(--pn-secondary);
+      padding: 70px 40px;
+      @media #{$xs} {
+        padding: 40px 20px;
+      }
+      ul {
+        li {
+          .icon {
+            background-color: rgb(255, 255, 255, 0.1);
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+          }
+          .info {
+            span {
+              opacity: 0.8;
+            }
+            .heading-five {
+              margin-top: 5px;
+              opacity: 0.8;
+            }
+          }
+        }
+        li + li {
+          margin-top: 53px;
+        }
+      }
+    }
+  }
+}
+
+.message-section-border {
+  border: 1px solid var(--pn-border);
+}

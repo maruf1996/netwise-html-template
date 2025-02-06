@@ -1,5 +1,7 @@
 @use "../utils" as *;
 
+// bannar section one
+
 .banner-section {
   padding: 117px 0 17px 0;
   @media #{$md,$xs} {
@@ -95,5 +97,153 @@
     @media #{$md,$sm,$xs} {
       padding-top: 50px;
     }
+  }
+}
+
+// bannar section two
+.banner-section-two {
+  padding: 80px 0;
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 64%;
+    height: 100%;
+    background-color: var(--pn-black);
+    content: "";
+    z-index: -1;
+    clip-path: polygon(0 0, calc(100% - 360px) 0, 100% 100%, 0% 100%);
+    @media #{$xl} {
+      width: 68%;
+      clip-path: polygon(0 0, calc(100% - 340px) 0, 100% 100%, 0% 100%);
+    }
+    @media #{$lg} {
+      width: 74%;
+      clip-path: polygon(0 0, calc(100% - 340px) 0, 100% 100%, 0% 100%);
+    }
+    @media #{$md,$xs} {
+      width: 100%;
+      clip-path: none;
+    }
+  }
+  .banner-content {
+    .banner-title {
+      max-width: 458px;
+      font-size: 92px;
+      line-height: 100px;
+      letter-spacing: -1.841px;
+      @media #{$xl} {
+        font-size: 68px;
+        line-height: 78px;
+        max-width: 333px;
+      }
+      @media #{$lg,$md,$xs} {
+        font-size: 52px;
+        line-height: 63px;
+        max-width: 333px;
+      }
+      @media #{$md,$xs} {
+        max-width: 100%;
+        text-align: center;
+      }
+    }
+    p {
+      @media #{$md,$xs} {
+        max-width: 66%;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 30px;
+      }
+      @media #{$md,$xs} {
+        max-width: 96%;
+      }
+    }
+    .play-video {
+      width: 203px;
+      height: 203px;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 15px;
+      @media #{$md,$xs} {
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 30px;
+      }
+      .play-icon {
+        width: 89px;
+        height: 89px;
+        background-color: var(--pn-primary);
+        font-size: 25px;
+      }
+      .rounded-img {
+        animation: spin 26s infinite linear;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+  .banner-image {
+    transform: translateX(30px);
+    .img {
+      width: 873px;
+      @media #{$xl} {
+        width: 677px;
+      }
+      @media #{$lg,$md} {
+        width: 606px;
+      }
+      @media #{$xs} {
+        width: 100%;
+        padding-right: 50px;
+      }
+      @media #{$md,$xs} {
+        margin: 0 auto;
+      }
+    }
+    .banner-shape-2 {
+      top: -82px;
+      left: 25px;
+      @media #{$xl} {
+        top: -124px;
+        left: -18px;
+      }
+      @media #{$lg} {
+        top: -146px;
+        left: -22px;
+      }
+    }
+    .banner-shape-3 {
+      top: 361px;
+      left: -29px;
+      @media #{$xl} {
+        top: 331px;
+        left: -69px;
+        transform: rotate(-9deg);
+      }
+      @media #{$lg} {
+        top: 287px;
+        left: -61px;
+        transform: rotate(-9deg);
+      }
+    }
+  }
+  .banner-shapes {
+    .banner-shape-4 {
+      top: 0;
+      right: 0;
+      @media #{$lg} {
+        top: -143px;
+        right: -63px;
+      }
+    }
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }

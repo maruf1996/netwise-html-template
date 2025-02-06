@@ -1,1 +1,61 @@
 @use "../utils" as *;
+
+.contact-section {
+  .contact-information {
+    .info-item {
+      gap: 20px;
+      border: 1px solid var(--pn-border);
+      padding: 20px 40px;
+      height: 100%;
+      .icon-box {
+        width: 65px;
+        height: 65px;
+        @include transition(0.3s);
+        i {
+          font-size: 24px;
+          color: var(--pn-secondary);
+          @include transition(0.3s);
+        }
+      }
+      .text {
+        .title {
+          margin-bottom: 7px;
+        }
+        a {
+          color: var(--pn-paragraph);
+          @include transition(0.3s);
+          &:hover {
+            color: var(--pn-secondary);
+          }
+        }
+      }
+      &:hover {
+        .icon-box {
+          background-color: var(--pn-secondary) !important;
+          i {
+            color: var(--pn-white);
+          }
+        }
+      }
+    }
+  }
+  .contact-form {
+    border-radius: 40px;
+    padding: 60px;
+    margin-bottom: -125px;
+    z-index: 9;
+    .title {
+      margin-bottom: 46px;
+    }
+    .theme-btn {
+      max-width: 570px;
+    }
+  }
+  .contact-map {
+    height: 737px;
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

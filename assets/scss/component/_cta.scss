@@ -22,3 +22,14 @@
     font-size: 14px;
   }
 }
+
+.cta-section-two {
+  padding: 144px 0 137px 0;
+  background-color: var(--pn-secondary);
+  .cta-btn {
+    gap: 45px;
+    @media #{$xs} {
+      gap: 15px;
+    }
+  }
+}

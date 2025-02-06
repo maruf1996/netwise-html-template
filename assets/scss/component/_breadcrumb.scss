@@ -1,0 +1,77 @@
+@use "../utils" as *;
+
+.breadcrumb-section {
+  background: rgb(255, 190, 22, 0.05);
+  padding-top: 180px;
+  .breadcrumb-img {
+    @media #{$xxs} {
+      display: none;
+    }
+    img {
+      @media #{$md} {
+        width: 250px;
+      }
+      @media #{$xs} {
+        width: 210px;
+      }
+    }
+  }
+  .breadcrumb-text {
+    padding-bottom: 60px;
+    @media #{$md,$xs} {
+      padding-bottom: 30px;
+    }
+
+    .heading-two {
+      @media #{$xl} {
+        font-size: 55px;
+        line-height: 1;
+      }
+      @media #{$lg,$md} {
+        font-size: 45px;
+        line-height: 1;
+      }
+      @media #{$xs} {
+        font-size: 35px;
+        line-height: 1;
+      }
+    }
+    ul {
+      gap: 40px;
+      li {
+        color: var(--pn-black);
+        font-family: var(--pn-Grotesk-fonts);
+        font-size: 22px;
+        line-height: 36px;
+        font-weight: 700;
+        position: relative;
+        @media #{$xs} {
+          font-size: 16px;
+          line-height: 1;
+        }
+        a {
+          color: var(--pn-black);
+          @include transition(0.3s);
+          &:hover {
+            color: var(--pn-secondary);
+          }
+        }
+        &::after {
+          position: absolute;
+          top: 50%;
+          right: -23px;
+          transform: translateY(-50%);
+          content: "\f105";
+          font-family: "Font Awesome 6 Pro";
+          color: var(--pn-secondary);
+          font-size: 16px;
+        }
+        &:last-child {
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

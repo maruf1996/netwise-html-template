@@ -1,0 +1,40 @@
+@use "../utils" as *;
+
+.who-we-are-section {
+  .image {
+    .counter {
+      padding: 20px;
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
+      background-color: var(--pn-tertiary);
+      @media #{$xxs} {
+        border-radius: 30px;
+        margin-bottom: 20px;
+      }
+      .icon-box-secondary {
+        width: 120px;
+        height: 120px;
+      }
+      .count {
+        font-size: 60px;
+        line-height: 68px;
+        letter-spacing: -1.48px;
+        @media #{$xs} {
+          font-size: 46px;
+          line-height: 42px;
+        }
+      }
+    }
+    .img {
+      max-width: 490px;
+      width: 100%;
+      margin-left: auto;
+      border-top-right-radius: 30px;
+      border-bottom-right-radius: 30px;
+      @media #{$xxs} {
+        border-radius: 30px;
+        margin: auto;
+      }
+    }
+  }
+}

@@ -29,6 +29,26 @@
     },
   });
 
+  // Magnific video js
+  $(".play-video").magnificPopup({
+    type: "iframe",
+    iframe: {
+      markup:
+        '<div class="mfp-iframe-scaler">' +
+        '<div class="mfp-close"></div>' +
+        '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
+        "</div>",
+      patterns: {
+        youtube: {
+          index: "youtube.com/",
+          id: "v=",
+          src: "https://www.youtube.com/embed/%id%?autoplay=1",
+        },
+      },
+      srcAction: "iframe_src",
+    },
+  });
+
   // Team move and active js
   var team_item = gsap.utils.toArray(".team-item");
   let hover_img = gsap.utils.toArray(".hover-image");
@@ -109,6 +129,30 @@
     ],
   });
 
+  $(".services-slider-two").slick({
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: false,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+
   // testimonial slider js
   $(".testimonial-slider").slick({
     dots: false,
@@ -119,6 +163,61 @@
     arrows: false,
     autoplay: true,
   });
+
+  // testimonial slider two js
+  $(".testimonial-two-slider").slick({
+    dots: true,
+    infinite: true,
+    speed: 800,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+  });
+
+  // blog slider js
+  $(".blog-slider").slick({
+    dots: false,
+    infinite: true,
+    speed: 800,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+    autoplay: false,
+    prevArrow: $(".blog-arrows .arrow-prev"),
+    nextArrow: $(".blog-arrows .arrow-next"),
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+
+  // Project horizontal scroll js
+  let horizontalSection = document.querySelector(".horizontal-scroll");
+  if (horizontalSection) {
+    gsap.to(".horizontal-scroll", {
+      x: () => horizontalSection.scrollWidth * -1,
+      xPercent: 100,
+      scrollTrigger: {
+        trigger: ".horizontal-scroll",
+        start: "top 40%",
+        end: "+=2000px",
+        pin: ".project-section-two",
+        scrub: 2.4,
+        invalidateOnRefresh: true,
+      },
+    });
+  }
 
   // Mobile menu js start
   $(".mobile-topbar .bars").on("click", function () {

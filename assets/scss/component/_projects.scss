@@ -44,3 +44,39 @@
     margin-top: 24px;
   }
 }
+
+.project-section-two {
+  .project-item {
+    .overlay {
+      padding: 20px;
+      @include transition(0.3s);
+      opacity: 0;
+      visibility: hidden;
+      .project-info {
+        background-color: var(--pn-rgba-color-1);
+        padding: 24px;
+        .icon-box {
+          width: 73px;
+          height: 73px;
+          margin-top: 65px;
+          &:hover {
+            background: var(--pn-white);
+          }
+        }
+      }
+    }
+    &:hover {
+      .overlay {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.project-item .text {
+  pointer-events: none;
+  a {
+    pointer-events: auto; /* Ensures the link remains clickable */
+  }
+}

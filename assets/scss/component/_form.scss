@@ -11,17 +11,32 @@
       @include transition(0.3s);
       padding: 0 20px;
       font-size: 18px;
+      background: var(--pn-background);
       &:focus {
         border: 1px solid var(--pn-secondary);
       }
     }
+    .form-select {
+      background-image: var(--bs-form-select-bg-img),
+        var(--bs-form-select-bg-icon, none);
+      background-repeat: no-repeat;
+      background-position: right 22px center;
+      background-size: 16px 17px;
+    }
     .textarea-control {
-      height: 130px;
+      height: 150px;
       padding: 20px;
       border-radius: 30px !important;
       resize: none;
       &:focus {
         outline: var(--pn-secondary) !important;
+      }
+    }
+  }
+  &.style-2 {
+    .input-group {
+      .form-field {
+        background: var(--pn-white);
       }
     }
   }
