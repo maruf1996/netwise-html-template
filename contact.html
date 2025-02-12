@@ -137,7 +137,7 @@
                   ></a>
                   <ul class="list-unstyled">
                     <li><a href="index.html">Home One</a></li>
-                    <li><a href="home-two.html">Home Two</a></li>
+                    <li><a href="index-2.html">Home Two</a></li>
                   </ul>
                 </li>
                 <li class="sub-mobile-menu">
@@ -296,14 +296,20 @@
           <div class="contact-form mt-80 background position-relative">
             <h2 class="heading-two text-center title">Get In Touch</h2>
             <div class="form">
-              <form action="#">
+              <form
+                action="assets/js/ajax-form.js"
+                method="POST"
+                id="contact-form"
+              >
                 <div class="row g-4 mb-10">
                   <div class="col-lg-6">
                     <div class="input-group">
                       <input
                         type="text"
+                        name="name"
                         class="form-control form-field shadow-none"
                         placeholder="Your Name"
+                        required
                       />
                     </div>
                   </div>
@@ -311,8 +317,10 @@
                     <div class="input-group">
                       <input
                         type="email"
+                        name="email"
                         class="form-control form-field shadow-none"
                         placeholder="Your Email"
+                        required
                       />
                     </div>
                   </div>
@@ -320,8 +328,10 @@
                     <div class="input-group">
                       <input
                         type="tel"
+                        name="phone"
                         class="form-control form-field shadow-none"
                         placeholder="Your Number"
+                        required
                       />
                     </div>
                   </div>
@@ -329,8 +339,10 @@
                     <div class="input-group">
                       <input
                         type="text"
+                        name="subject"
                         class="form-control form-field shadow-none"
                         placeholder="Subject"
+                        required
                       />
                     </div>
                   </div>
@@ -338,7 +350,9 @@
                     <div class="input-group">
                       <textarea
                         class="form-field textarea-control"
+                        name="message"
                         placeholder="Message here.."
+                        required
                       ></textarea>
                     </div>
                   </div>
@@ -352,6 +366,7 @@
                   </button>
                 </div>
               </form>
+              <p class="ajax-response mb-0"></p>
             </div>
           </div>
         </div>
@@ -567,11 +582,8 @@
     <!-- js file  here -->
     <script src="assets/js/vender/jquery-3.6.4.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/gsap.js"></script>
-    <script src="assets/js/gsap-scroll-trigger.js"></script>
-    <script src="assets/js/gsap-split-text.js"></script>
     <script src="assets/js/jquery.appear.js"></script>
-    <script src="assets/js/odometer.min.js"></script>
+    <script src="assets/js/ajax-form.js"></script>
     <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
     <script src="assets/js/main.js"></script>

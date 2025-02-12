@@ -410,3 +410,15 @@
     }
   }
 }
+
+.pn-header-section-two {
+  & .mobile-menu-area {
+    background-color: var(--pn-background);
+  }
+}
+
+.sticky-menu {
+  & .mobile-menu-area {
+    background-color: var(--pn-white);
+  }
+}
